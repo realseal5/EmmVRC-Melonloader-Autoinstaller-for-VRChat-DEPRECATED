@@ -13,7 +13,7 @@ echo ^    ^|  ^| \/\  ___/  / __ \^|  ^|__ \___ \ \  ___/  / __ \^|  ^|__
 echo ^    ^|__^|    \____^> (______/____//_____/  \____^> (______/____/ 
 echo [0m
 echo ^    --------------------------------------------------------
-echo ^    ^|  MelonLoader - EmmVRC AutoInstaller v1.7 by realseal ^|
+echo ^    ^|  MelonLoader - EmmVRC AutoInstaller v1.8 by realseal ^|
 echo ^    ^|  EmmVRC by thetrueyoshifan (thetrueyoshifan.com)     ^|
 echo ^    ^|  MelonLoader by Herp Derpinstine (melonwiki.xyz)     ^|
 echo ^    --------------------------------------------------------
@@ -67,7 +67,7 @@ IF EXIST Mods\emmVRCLoader.dll del Mods\emmVRCLoader.dll
 IF %ERRORLEVEL% NEQ 0 (set /A x=%x%+1)
     echo Done!
     echo Downloading MelonLoader..
-powershell -Command "Invoke-WebRequest https://github.com/HerpDerpinstine/MelonLoader/releases/latest/download/MelonLoader.x64.zip -Outfile MelonLoader.zip"
+powershell -Command "Invoke-WebRequest https://github.com/LavaGang/MelonLoader/releases/download/v0.3.0/MelonLoader.x64.zip -Outfile MelonLoader.zip"
 IF %ERRORLEVEL% NEQ 0 (set /A x=%x%+1)
     echo Done!
     echo Installing MelonLoader..
@@ -79,7 +79,7 @@ IF EXIST MelonLoader.zip del MelonLoader.zip
 IF %ERRORLEVEL% NEQ 0 (set /A x=%x%+1)
     echo Done!
     echo Downloading EmmVRC..
-powershell -Command "Invoke-WebRequest https://thetrueyoshifan.com/downloads/emmVRCLoader.dll -Outfile Mods\emmVRCLoader.dll"
+powershell -Command "Invoke-WebRequest https://dl.emmvrc.com/downloads/emmVRCLoader.dll -Outfile Mods\emmVRCLoader.dll"
 IF %ERRORLEVEL% NEQ 0 (set /A x=%x%+1)
     echo Done!
 IF %x% EQU 0 (echo [32m [1m & echo. ^    ---------------------------------------------------------- & echo. ^    ^| Melonloader and EmmVRC have been successfully updated! ^| & echo. ^    ^|     Please consider donating to the Developers ^<3      ^| & echo. ^    ---------------------------------------------------------- & echo. [0m
