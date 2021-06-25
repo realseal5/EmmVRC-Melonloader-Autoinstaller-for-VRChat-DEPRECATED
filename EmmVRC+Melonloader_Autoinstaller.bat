@@ -13,7 +13,7 @@ echo ^    ^|  ^| \/\  ___/  / __ \^|  ^|__ \___ \ \  ___/  / __ \^|  ^|__
 echo ^    ^|__^|    \____^> (______/____//_____/  \____^> (______/____/ 
 echo [0m
 echo ^    --------------------------------------------------------
-echo ^    ^|  MelonLoader - EmmVRC AutoInstaller v1.8 by realseal ^|
+echo ^    ^|  MelonLoader - EmmVRC AutoInstaller v1.9 by realseal ^|
 echo ^    ^|  EmmVRC by thetrueyoshifan (thetrueyoshifan.com)     ^|
 echo ^    ^|  MelonLoader by Herp Derpinstine (melonwiki.xyz)     ^|
 echo ^    --------------------------------------------------------
@@ -67,7 +67,7 @@ IF EXIST Mods\emmVRCLoader.dll del Mods\emmVRCLoader.dll
 IF %ERRORLEVEL% NEQ 0 (set /A x=%x%+1)
     echo Done!
     echo Downloading MelonLoader..
-powershell -Command "Invoke-WebRequest https://github.com/LavaGang/MelonLoader/releases/download/v0.3.0/MelonLoader.x64.zip -Outfile MelonLoader.zip"
+powershell -Command "Invoke-WebRequest https://github.com/LavaGang/MelonLoader/releases/latest/download/MelonLoader.x64.zip -Outfile MelonLoader.zip"
 IF %ERRORLEVEL% NEQ 0 (set /A x=%x%+1)
     echo Done!
     echo Installing MelonLoader..
